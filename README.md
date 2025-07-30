@@ -1,5 +1,5 @@
 # NOMBRE
-## Juan Esteban Lozano 
+## Luis Gabriel Aponte Perez
 
 ### 100 PALABRAS DE LO QUE HACE SU APLICACION
 
