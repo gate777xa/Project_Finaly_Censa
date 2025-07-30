@@ -35,23 +35,8 @@
 <body>
 
 <!-- Navbar -->
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
-  <div class="container-fluid">
-    <a class="navbar-brand" href="#">Lionel Messi 🐐 </a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-      <ul class="navbar-nav">
-        <li class="nav-item"><a class="nav-link" href="#bio">Biografía</a></li>
-        <li class="nav-item"><a class="nav-link" href="#logros">Logros</a></li>
-        <li class="nav-item"><a class="nav-link" href="#estadisticas">Estadísticas</a></li>
-        <li class="nav-item"><a class="nav-link" href="#video">Video</a></li>
-        <li class="nav-item"><a class="nav-link" href="#galeria">Galería</a></li>
-      </ul>
-    </div>
-  </div>
-</nav>
+<?php	  include "layout/layout.php"
+?>
 
 <!-- Sección Biografía -->
 <section id="bio" class="section bg-white">
@@ -128,10 +113,85 @@
 <!-- Video -->
 <section id="video" class="section text-center bg-light-blue">
   <div class="container">
-    <h2 class="mb-4">Momentos Legendarios</h2>
-    <div class="ratio ratio-16x9">
-      <iframe src="Momentos legendarios del GOAT.mp4" title="Messi" frameborder="0" allowfullscreen></iframe>
+    <h2 class="mb-4">Modal</h2>
+    <!-- Button trigger modal -->
+<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+  TABLA REGISTRO
+</button>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+<table class="table table-bordered border-primary">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Nombre</th>
+          <th>Apellido</th>
+          <th>Edad</th>
+          <th>Correo</th>
+          <th>Telefono</th>
+          <th>Editar</th>
+          <th>Eliminar</th>
+        </tr>
+      </thead>
+<?php	
+include_once "Controller/Conexion.php";
+$conexion = new Conexion();
+$conexion = $conexion->conectar();
+if ($conexion){
+  $sql = "SELECT * FROM registropersonas";
+  $consulta = $conexion->prepare($sql);
+  $consulta->execute();
+  $i = 0;
+  while($fila=$consulta-> fetch(PDO::FETCH_ASSOC)){
+    $i += 1;
+  
+
+
+    
+  
+?>
+  <div class="table-responsive">
+    
+      <tbody class="table-group-divider">
+        <tr>
+          <th scope="row">1</th>
+          <td><?php echo $fila["Nombre"]?></td>
+          <td><?php echo $fila["Apellido"]?></td>
+          <td><?php echo $fila["Edad"]?></td>
+          <td><?php echo $fila["Correo"]?></td>
+         <td><?php echo $fila["Telefono"]?></td>
+          <td><a href="update.php" type="button" class="btn btn-success">Editar</a></td>
+          <td></td>
+         
+        </tr>
+      </tbody>
+
+    <?php
+      }}
+      else {
+        echo "No existe conexion";
+      } 
+      ?>
+    </table>
+  </div>
+</div>
+
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
     </div>
+  </div>
+</div>
+  
   </div>
 </section>
 
@@ -214,8 +274,8 @@
 <!-- Footer -->
 <footer class="bg-dark text-white text-center py-3">
     <p>Página creada sobre del GOAT MESSI © 2025</p>
-    <p>Desarrollada por [SAMUEL/CASTRO]</p>
-    <p>Contacto: <a href="samucastro128@gmail.com" class="text-white">samucastro128@gmail.com</a></p>
+    <p>Desarrollada por [SAMUEL/CASTRO] [JUAN/LOZANO]</p>
+    <p>Contacto: <a href="samucastro128@gmail.com" class="text-white">juanestebanlozano123@gmail.com</a></p>
   </footer>
 
   <!-- Modal genérico -->
