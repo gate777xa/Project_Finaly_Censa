@@ -1,7 +1,10 @@
 # NOMBRE
 ## Luis ap 
 
-### 100 PALABRAS DE LO QUE HACE SU APLICACION
+## 100 PALABRAS DE LO QUE HACE SU APLICACION
+
+
+Esta página está dedicada a Lionel Messi, uno de los futbolistas más grandes de la historia. Presenta una biografía de su carrera, logros destacados como sus 8 Balones de Oro y estadísticas por clubes y selección. Incluye una galería de imágenes, un formulario de registro y una tabla interactiva con datos de personas. El diseño es moderno, con Bootstrap y secciones bien estructuradas. También cuenta con un modal para mostrar registros. Es un homenaje visual e informativo al “GOAT” del fútbol, destacando tanto su impacto deportivo como su legado mundial.
 
 #BAKUP BASE DE DATOS
 
