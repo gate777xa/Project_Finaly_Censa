@@ -162,15 +162,16 @@ if ($conexion){
     
       <tbody class="table-group-divider">
         <tr>
-          <th scope="row">1</th>
+          <th scope="row"><?php echo $fila["Id"]?></th>
           <td><?php echo $fila["Nombre"]?></td>
           <td><?php echo $fila["Apellido"]?></td>
           <td><?php echo $fila["Edad"]?></td>
           <td><?php echo $fila["Correo"]?></td>
          <td><?php echo $fila["Telefono"]?></td>
-          <td><a href="update.php" type="button" class="btn btn-success">Editar</a></td>
+          <td><a href="update.php?id=<?php echo $fila["Id"]?>" type="button" class="btn btn-success">Editar</a></td>
+          <td><button class="btn btn-danger btn-sm">Eliminar</button></td>
           <td></td>
-         
+
         </tr>
       </tbody>
 
