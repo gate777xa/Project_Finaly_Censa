@@ -1,5 +1,5 @@
 # NOMBRE
-## Samuel Castro Zapata
+## luis gabriel aponte perez
 
 ### 100 PALABRAS DE LO QUE HACE SU APLICACION
 La página de Lionel Messi o mas conocido como el GOAT, también usa HTML y PHP para crear un sitio dinámico con diseño adaptable gracias a Bootstrap. Incluye un menú, secciones sobre su vida, logros, estadísticas, un carrusel de fotos y un formulario de registro. Al pulsar “TABLA REGISTRO”, se muestra un modal con datos extraídos de una base MySQL usando PHP y PDO, con opciones para editar o eliminar registros. La clase Conexion conecta con la base de datos usando datos definidos en Configuraciones.php. Un script procesa y guarda la información enviada por formulario en la base de datos.
@@ -159,4 +159,5 @@ COMMIT;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 
 ```
+
 		
